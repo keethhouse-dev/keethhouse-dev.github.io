@@ -27,7 +27,7 @@ Keeth House is an organically built eco-stay situated near the beautiful town of
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/your-repo/keeth-house.git
+   git clone https://github.com/keethhouse-dev/keethhouse-ui.git
    cd keeth-house
    ```
 
@@ -61,7 +61,7 @@ yarn build
 
 ### Deploy
 
-After building, deploy the `out` directory to your hosting provider.
+GitHub is conneted with Vercel, when we commit code to main branch, automatically deployment wil trigger and code will deploy to vercel in less than 2 mins.
 
 ## Project Structure
 
