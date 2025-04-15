@@ -20,13 +20,10 @@ import { ScrollToTop } from "@/components/scroll-to-top";
 import { phaseData } from "@/lib/house-data";
 import { getBlurDataURL } from "@/lib/image-loader";
 import { useRouter } from "next/navigation";
+import React from "react";
 
-export default function HouseDetailPage({
-  params,
-}: {
-  params: { id: string };
-}) {
-  const { id } = params;
+export default function Page({ params }: { params: Promise<{ id: string }> }) {
+  const { id } = React.use(params); // ✅ unwrap the Promise
   const [galleryOpen, setGalleryOpen] = useState(false);
   const [selectedImageIndex, setSelectedImageIndex] = useState(0);
   const [isLoaded, setIsLoaded] = useState(false);
@@ -289,6 +286,7 @@ export default function HouseDetailPage({
                   "Natural cooling design",
                   "Sustainable materials",
                   "Panoramic nature views",
+                 
                 ].map((feature, index) => (
                   <div key={index} className="flex items-start">
                     <Check className="h-5 w-5 text-primary mr-2 flex-shrink-0 mt-0.5" />
@@ -301,13 +299,8 @@ export default function HouseDetailPage({
             <section className="bg-white rounded-xl shadow-sm p-6 md:p-8">
               <h2 className="text-2xl font-bold mb-6">Location</h2>
 
-              <div className="relative h-64 md:h-auto pb-3">
-                <Image
-                  src={house.map}
-                  alt={`Map of Keeth House ${house.name}`}
-                  fill
-                  className="object-cover"
-                />
+              <div className="relative h-auto md:h-100 pb-4">
+                <img src={house.map} alt="Map"  className="object-cover" />
                 <div className="absolute top-4 right-4 z-10">
                   <a
                     href={house.navigation}
