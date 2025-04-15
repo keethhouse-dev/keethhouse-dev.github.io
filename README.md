@@ -80,4 +80,4 @@ This project is licensed under the MIT License. See the `LICENSE` file for detai
 
 ## Contact
 
-For inquiries, email us at [reservations@keethhouse.com](mailto:reservations@keethhouse.com).
+For inquiries, email us at [reservations@keethhouse.com](mailto:reservations@keethhouse.com). 
