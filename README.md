@@ -1,4 +1,4 @@
-# Keeth House - Experience Natural Living
+# Keeth House - Experience Natural Living 
 
 Keeth House is an organically built eco-stay situated near the beautiful town of Auroville. This project is a modern web application designed to showcase the unique accommodations and eco-friendly lifestyle offered by Keeth House.
 
