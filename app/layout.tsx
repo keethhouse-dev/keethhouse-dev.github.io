@@ -9,7 +9,26 @@ import { SmoothScrollProvider } from "@/components/smooth-scroll-provider"
 
 export const metadata: Metadata = {
   title: "Keeth House - Experience Natural Living",
-  description: "An organically built eco-stay situated near the beautiful town of Auroville.",
+  description: "FROM UNIQUE HOUSES TO TREE HOUSE.\n\nEach of our houses tells a unique story, blending traditional craftsmanship with thoughtful amenities. Discover the perfect retreat for your natural living experience",
+  openGraph: {
+    type: "website",
+    url: "https://www.keethhouse.com",
+    title: "Keeth House - Experience Natural Living",
+    description:
+      "FROM UNIQUE HOUSES TO TREE HOUSE.\n\nEach of our houses tells a unique story, blending traditional craftsmanship with thoughtful amenities. Discover the perfect retreat for your natural living experience",
+    images: [
+      {
+        url: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/TheKhayaNest.JPG-DbE6ORLqjP5Myq2DSrbH6qOOr1KVZF.jpeg",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Keeth House - Experience Natural Living",
+    description:
+      "FROM UNIQUE HOUSES TO TREE HOUSE.\n\nEach of our houses tells a unique story, blending traditional craftsmanship with thoughtful amenities. Discover the perfect retreat for your natural living experience",
+    images: ["https://hebbkx1anhila5yf.public.blob.vercel-storage.com/TheKhayaNest.JPG-DbE6ORLqjP5Myq2DSrbH6qOOr1KVZF.jpeg"],
+  },
 }
 
 export const viewport = {
