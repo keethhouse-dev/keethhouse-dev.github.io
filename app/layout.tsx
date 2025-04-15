@@ -18,7 +18,7 @@ export const metadata: Metadata = {
       "FROM UNIQUE HOUSES TO TREE HOUSE.\n\nEach of our houses tells a unique story, blending traditional craftsmanship with thoughtful amenities. Discover the perfect retreat for your natural living experience",
     images: [
       {
-        url: "/meta-tag.png",
+        url: "/images/khaya-nest/26.jpg",
       },
     ],
   },
@@ -27,7 +27,7 @@ export const metadata: Metadata = {
     title: "Keeth House - Experience Natural Living",
     description:
       "FROM UNIQUE HOUSES TO TREE HOUSE.\n\nEach of our houses tells a unique story, blending traditional craftsmanship with thoughtful amenities. Discover the perfect retreat for your natural living experience",
-    images: ["/meta-tag.png"],
+    images: ["/images/khaya-nest/26.jpg"],
   },
 }
 
