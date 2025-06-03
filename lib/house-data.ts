@@ -358,9 +358,23 @@ export const phaseData = [
         propertyId: 9930,
         name: "Keeth House - VIII",
         description:
-          "Coming Soon - Keeth House VIII will offer a serene escape with open dining and kitchenette area, inviting you to enjoy meals under the stars or the soft morning light, connecting deeply with nature.",
+          "Keeth House VIII is a refreshing take in Keeth House living, opening directly to a private swimming pool that sets the tone for a nature-immersed stay. At its heart, an open-to-sky roof invites sunlight and rain indoors, blurring the line between shelter and sky. The house features a spacious bedroom and a warm dining area perfect for gathering and connecting. Designed for those who seek comfort without losing touch with the outdoors, Keeth House VIII offers a serene and elemental living experience.",
         images: [
-          "/images/coming-soon.jpg?height=600&width=800&text=Coming Soon",
+          "/images/keeth-house-viii/1.JPG",
+          "/images/keeth-house-viii/2.JPG",
+          "/images/keeth-house-viii/3.JPG",
+          "/images/keeth-house-viii/4.JPG",
+          "/images/keeth-house-viii/5.JPG",
+          "/images/keeth-house-viii/6.JPG",
+          "/images/keeth-house-viii/7.JPG",
+          "/images/keeth-house-viii/8.JPG",
+          "/images/keeth-house-viii/9.JPG",
+          "/images/keeth-house-viii/10.JPG",
+          "/images/keeth-house-viii/11.JPG",
+          "/images/keeth-house-viii/12.JPG",
+          "/images/keeth-house-viii/13.JPG",
+          "/images/keeth-house-viii/14.JPG",
+          "/images/keeth-house-viii/15.JPG"
         ],
         specializations: [
           { name: "Swimming Pool", icon: Waves },
@@ -368,7 +382,6 @@ export const phaseData = [
           { name: "Kitchen", icon: UtensilsCrossed },
           { name: "Bar Counter", icon: Martini },
         ],
-        comingSoon: true,
         map: '/images/maps/Phase-III-Map.png',
         navigation: 'https://maps.app.goo.gl/yjh3P49suiYNaVHS7',
         guests: 4,

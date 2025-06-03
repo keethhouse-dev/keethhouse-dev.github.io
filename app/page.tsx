@@ -138,7 +138,7 @@ const HouseCard = React.memo(
             className={`object-cover transition-all duration-700 ease-out ${
               imageLoaded ? "opacity-100 scale-100" : "opacity-0 scale-105"
             } ${
-              house.id === "keeth-house-8" || house.id === "keeth-house-10"
+               house.id === "keeth-house-10"
                 ? "blur-sm"
                 : ""
             } group-hover:scale-110 transition-transform duration-700`}
