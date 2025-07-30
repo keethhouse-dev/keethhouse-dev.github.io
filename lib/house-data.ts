@@ -439,7 +439,7 @@ export const phaseData = [
         propertyId: 9930,
         name: "De Cabin",
         description:
-          "Wooden House provides 400 sq. ft. of cosy, comfortable space, ideal for up to 3 guests. The room's warm design and modern amenities create a tranquil retreat for relaxation. Whether you're here for a short or extended stay, the Wooden House offers a peaceful environment to unwind. Enjoy comfort and convenience in this inviting room, designed to make your stay enjoyable and memorable.",
+          "Wooden House provides 400 sq. ft. of cosy, comfortable space, ideal for up to 2 guests. The room's warm design and modern amenities create a tranquil retreat for relaxation. Whether you're here for a short or extended stay, the Wooden House offers a peaceful environment to unwind. Enjoy comfort and convenience in this inviting room, designed to make your stay enjoyable and memorable.",
         images: [
           "/images/de-cabin/1.JPG",
           "/images/de-cabin/2.JPG",
