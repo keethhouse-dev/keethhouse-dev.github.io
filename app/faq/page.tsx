@@ -20,132 +20,137 @@ export default function FAQPage() {
   }, [])
 
   // FAQ categories
-  const faqCategories = [
-    {
-      title: "Booking & Reservations",
-      faqs: [
-        {
-          question: "What are the check-in and check-out timings?",
-          answer:
-            "Check-in time is 12pm and Check-out time is 10am.",
-        },
-        {
-          question: "Is early check-in possible?",
-          answer:
-            "Your early check-in request is important to us, and we would love to accommodate it based on the availability. Kindly check with us a day prior to the reservation. However, please note that we might have a booking scheduled prior to your arrival, which means we can only provide you with access to the house by 12pm. \n\nWe kindly request your understanding and cooperation in planning your arrival accordingly for 12pm. Your cooperation is greatly appreciated.",
-        },
-        {
-          question: "How early should I book my stay at Keeth House?",
-          answer:
-            "We recommend booking a month or 2 in advance, especially during the peak season (October to March). For weekends and holidays, it’s best to book even earlier to ensure availability.",
-        },
-        {
-          question: "What is the cancellation policy?",
-          answer:
-            "If cancellation is done 14 or more days prior to arrival, then 10% of the booking amount will be charged. If cancellation is done within 14 days of arrival, then full amount will be charged.",
-        },
-        {
-          question: "Can I change my booking dates after confirmation?",
-          answer:
-            "Date Amendment Policy \n\nIf a date change is requested 14 or more days prior to arrival, we will do our best to accommodate the change, subject to availability. If the request is made within 14 days of arrival, no amendments can be made.",
-        },
-      ],
-    },
-    {
-      title: "Accommodations & Amenities",
-      faqs: [
-        {
-          question: "Is there Wi-Fi available?",
-          answer:
-            "Yes, we offer Wi-Fi in all our houses, except the Khaya Nest, where the connectivity is limited. In most areas, the connection is suitable for remote work.",
-        },
-        {
-          question: "Are meals included in the stay?",
-          answer:
-            "We’re delighted to offer South Indian breakfast and lunch. \n\n• Breakfast: ₹400 per couple \n• Lunch: ₹700 per couple \n\nPlease inform us at least a day in advance so we can prepare your meals with care. We’d also be happy to suggest excellent cafés in Auroville and Pondicherry for you to explore.",
-        },
-        {
-          question: "What’s the weather like at Keeth House?",
-          answer:
-            "Keeth House is designed with eco-conscious materials that help maintain comfort even during warm days. While afternoons can be slightly hot, the evenings are pleasant. Surrounded by trees, the natural setting creates a noticeable temperature drop at night—perfect for a relaxing and restful stay.\n\nFor added comfort, de Villa I and de Villa II in Keeth House Phase III are equipped with air-conditioning.",
-        },
-        {
-          question: "Does Keeth House have private bathrooms?",
-          answer:
-            "Yes, all our houses have private bathrooms. Some feature open-to-sky showers and bathtubs for a unique and refreshing experience with nature, while still ensuring complete privacy.",
-        },
+const faqCategories = [
+  {
+    title: "Booking & Reservations",
+    faqs: [
+      {
+        question: "What are the check-in and check-out timings?",
+        answer:
+          "Check-in time is 12 pm and Check-out time is 10 am.",
+      },
+      {
+        question: "Is early check-in possible?",
+        answer:
+          "Your early check-in request is important to us, and we would love to accommodate it based on the availability. Kindly check with us a day prior to the reservation. However, please note that we might have a booking scheduled prior to your arrival, which means we can only provide you with access to the house by 12 pm. \n\nWe kindly request your understanding and cooperation in planning your arrival accordingly for 12pm. Your cooperation is greatly appreciated.",
+      },
+      {
+        question: "How early should I book my stay at Keeth House?",
+        answer:
+          "We recommend booking a month or 2 in advance, especially during the peak season (October to March). For weekends and holidays, it’s best to book even earlier to ensure availability.",
+      },
+      {
+        question: "What is the cancellation policy?",
+        answer:
+          "If cancellation is done 14 or more days prior to arrival, then 10% of the booking amount will be charged. If cancellation is done within 14 days of arrival, then full amount will be charged.",
+      },
+      {
+        question: "Can I change my booking dates after confirmation?",
+        answer:
+          "Date Amendment Policy \n\nIf a date change is requested 14 or more days prior to arrival, we will do our best to accommodate the change, subject to availability. If the request is made within 14 days of arrival, no amendments can be made.",
+      },
+    ],
+  },
+  {
+    title: "Accommodations & Amenities",
+    faqs: [
+      {
+        question: "Is there Wi-Fi available?",
+        answer:
+          "Yes, we offer Wi-Fi in all our houses, except the Khaya Nest, where the connectivity is limited. In most areas, the connection is suitable for remote work.",
+      },
+      {
+        question: "Are meals included in the stay?",
+        answer:
+          "We’re delighted to offer South Indian breakfast and lunch. \n\n• Breakfast: ₹400 per couple \n• Lunch: ₹700 per couple \n\nPlease inform us at least a day in advance so we can prepare your meals with care. \n\nWe’d also be glad to suggest some excellent cafés in Auroville and Pondicherry for you to explore during your stay.",
+      },
+      {
+        question: "What’s the weather like at Keeth House?",
+        answer:
+          "Keeth House is designed with eco-conscious materials that help maintain comfort even during warm days. While afternoons can be slightly hot, the evenings are pleasant. Surrounded by trees, the natural setting creates a noticeable temperature drop at night—perfect for a relaxing and restful stay.\n\nFor added comfort, de Villa I and de Villa II in Keeth House Phase III are equipped with air-conditioning.",
+      },
+      {
+        question: "Does Keeth House have private bathrooms?",
+        answer:
+          "Yes, all our houses have private bathrooms. Some feature open-to-sky showers and bathtubs for a unique and refreshing experience with nature, while still ensuring complete privacy.",
+      },
+    ],
+  },
+  {
+    title: "Location & Transportation",
+    faqs: [
+      {
+        question: "How do I get to Keeth House?",
+        answer:
+          "We are located near Auroville, Tamil Nadu. Detailed directions will be provided after booking. Airport transfers can be arranged at an additional cost.",
+      },
+      {
+        question: "How far is Keeth House from Pondicherry?",
+        answer:
+          "We are approximately 15-25 minutes from Pondicherry by car, depending on which phase of Keeth House you're staying at.",
+      },
+      {
+        question: "Is there parking available?",
+        answer: "Yes, we offer free parking for our guests. The parking area is located near the reception.",
+      },
+      {
+        question: "Can you arrange transportation for local sightseeing?",
+        answer:
+          "Yes, we can arrange taxis, auto-rickshaws, or scooter rentals for local sightseeing. Please inform the reception in advance to make arrangements.",
+      },
+    ],
+  },
+  {
+    title: "Activities & Experiences",
+    faqs: [
+      {
+        question: "What activities are available?",
+        answer:
+          "We offer yoga sessions, nature walks, bird watching, cooking classes, and cultural experiences. Auroville and nearby beaches are also easily accessible.",
+      },
+      {
+        question: "Can I book activities in advance?",
+        answer:
+          "Yes, we recommend booking activities at least 24 hours in advance. Some seasonal activities may require earlier booking.",
+      },
+      {
+        question: "Are there any nearby attractions?",
+        answer:
+          "Yes, Auroville, Pondicherry's French Quarter, Matrimandir, and several beaches are within easy reach. We can provide recommendations based on your interests.",
+      },
+    ],
+  },
+  {
+    title: "Policies & Special Requests",
+    faqs: [
+      {
+        question: "Are pets allowed?",
+        answer: "Unfortunately, we’re not a pet-friendly property, as we already have resident animals at Keeth House. In rare cases, pets may be allowed only with prior host approval and upon agreeing to clear guidelines and additional charges.\n\nThank you for understanding and helping us maintain a respectful environment for all.",
+      },
+      {
+        question: "Is Keeth House suitable for children?",
+        answer:
+          "Yes, children are welcome and Keeth House is safe under parental supervision. Some cottages are more family-friendly than others, so we recommend discussing your needs with us while booking.",
+      },
+      {
+        question: "Do you accommodate special dietary requirements?",
+        answer:
+          "We can accommodate dietary preferences, including vegan, and allergy-specific needs. Please share your requirements with us when booking.",
+      },
+      {
+        question: "Can I host a small event at Keeth House?",
+        answer:
+          "We’re open to hosting small, mindful gatherings such as yoga retreats or conscious travel groups. To maintain the peaceful atmosphere of Keeth House, events are considered based on nature and group size.\n\nPlease contact us directly to discuss your vision—we’d love to explore if it’s a good fit.",
+      },
+      {
+        question: "Can I do a photoshoot at Keeth House?",
+        answer:
+          "Photoshoots are allowed only with prior approval and after discussing the guidelines with our team. A fee of ₹5,000 applies, and shoots are limited to Keeth House – Phase II and Phase III.\n\nKey guidelines include:\n\n– Max team size of 5 (including guests/photographers)\n– No plug-in lighting or decorations\n– Shoots must be limited to the booked house only\n– Common areas are not permitted for shoots\n– Furniture must not be moved\n\nNon-compliance will lead to immediate cancellation of the shoot without refund.",
+      },
+    ],
+  },
+]
 
-      ],
-    },
-    {
-      title: "Location & Transportation",
-      faqs: [
-        {
-          question: "How do I get to Keeth House?",
-          answer:
-            "We are located near Auroville, Tamil Nadu. Detailed directions will be provided after booking. Airport transfers can be arranged at an additional cost.",
-        },
-        {
-          question: "How far is Keeth House from Pondicherry?",
-          answer:
-            "We are approximately 15-25 minutes from Pondicherry by car, depending on which phase of Keeth House you're staying at.",
-        },
-        {
-          question: "Is there parking available?",
-          answer: "Yes, we offer free parking for our guests. The parking area is located near the reception.",
-        },
-        {
-          question: "Can you arrange transportation for local sightseeing?",
-          answer:
-            "Yes, we can arrange taxis, auto-rickshaws, or scooter rentals for local sightseeing. Please inform the reception in advance to make arrangements.",
-        },
-      ],
-    },
-    {
-      title: "Activities & Experiences",
-      faqs: [
-        {
-          question: "What activities are available?",
-          answer:
-            "We offer yoga sessions, nature walks, bird watching, cooking classes, and cultural experiences. Auroville and nearby beaches are also easily accessible.",
-        },
-        {
-          question: "Can I book activities in advance?",
-          answer:
-            "Yes, we recommend booking activities at least 24 hours in advance. Some seasonal activities may require earlier booking.",
-        },
-        {
-          question: "Are there any nearby attractions?",
-          answer:
-            "Yes, Auroville, Pondicherry's French Quarter, Matrimandir, and several beaches are within easy reach. We can provide recommendations based on your interests.",
-        },
-      ],
-    },
-    {
-      title: "Policies & Special Requests",
-      faqs: [
-        {
-          question: "Are pets allowed?",
-          answer: "We love animals and have a few friendly dogs and cats living on the property. While we generally do not allow pets due to the surrounding wildlife and natural waterbodies, we can consider exceptions on a case-by-case basis. \n\n If you're planning to bring a pet, please ensure the following: \n\n Your pet must be kept on a leash when outdoors \n\n Bring your own pet cage/crate and food \n\n Pets are not allowed on beds or carpets \n\n They must not disturb other guests, wildlife, or our waterbodies \n\n Please reach out to us in advance if you'd like to request an exception.",
-        },
-        {
-          question: "Is Keeth House suitable for children?",
-          answer:
-            "Yes, children are welcome at Keeth House. However, please note that some cottages may be more suitable than others for families. We recommend discussing your specific needs when booking.",
-        },
-        {
-          question: "Do you accommodate special dietary requirements?",
-          answer:
-            "Yes, we can accommodate various dietary requirements including vegan, gluten-free, and allergies. Please inform us of any special needs when booking.",
-        },
-        {
-          question: "Can I host a small event at Keeth House?",
-          answer:
-            "We’re open to hosting small, mindful gatherings such as yoga retreats or conscious travel groups. The possibility depends on the size and nature of the event, as we aim to maintain the peaceful atmosphere of our space. \n\n Please contact us directly to discuss your ideas and requirements—we’d love to see if it’s a good fit!",
-        },
-      ],
-    },
-  ]
 
   return (
     <div className="flex flex-col min-h-screen">
