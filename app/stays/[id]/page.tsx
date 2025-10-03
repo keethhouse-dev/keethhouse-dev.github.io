@@ -260,24 +260,6 @@ export default function Page({ params }: { params: Promise<{ id: string }> }) {
                   </div>
                 ))}
               </div>
-
-              <h3 className="text-xl font-semibold mb-4">
-                What makes it special
-              </h3>
-              <div className="grid md:grid-cols-2 gap-3 mb-6">
-                {[
-                  "Hand-crafted by local artisans",
-                  "Natural cooling design",
-                  "Sustainable materials",
-                  "Panoramic nature views",
-
-                ].map((feature, index) => (
-                  <div key={index} className="flex items-start">
-                    <Check className="h-5 w-5 text-primary mr-2 flex-shrink-0 mt-0.5" />
-                    <span className="text-foreground/80">{feature}</span>
-                  </div>
-                ))}
-              </div>
             </section>
 
             <section className="bg-white rounded-xl shadow-sm p-6 md:p-8">
