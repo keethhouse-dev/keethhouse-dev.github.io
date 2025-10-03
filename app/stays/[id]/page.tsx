@@ -229,6 +229,25 @@ export default function Page({ params }: { params: Promise<{ id: string }> }) {
               </div>
             </section>
 
+            <Link
+              href={`https://bookings.keethhouse.com/?chainId=7859&propertyId=${house.propertyId}&house=${house.id}`}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Button className="sm:hidden w-full bg-primary hover:bg-primary/90 py-6 relative overflow-hidden group">
+                <span className="relative z-10 flex items-center justify-center text-lg font-bold">
+                  Book Now
+                  <ExternalLink className="ml-2 h-5 w-5" />
+                </span>
+                <motion.span
+                  className="absolute inset-0 bg-white/20"
+                  initial={{ x: "-100%", opacity: 0.3 }}
+                  whileHover={{ x: "100%" }}
+                  transition={{ duration: 0.5 }}
+                />
+              </Button>
+            </Link>
+
             <section className="bg-white rounded-xl shadow-sm p-6 md:p-8 mb-8">
               <h2 className="text-2xl font-bold mb-6">Features & Amenities</h2>
               <div className="grid grid-cols-2 md:grid-cols-3 gap-y-4 gap-x-6 mb-8">
@@ -251,7 +270,7 @@ export default function Page({ params }: { params: Promise<{ id: string }> }) {
                   "Natural cooling design",
                   "Sustainable materials",
                   "Panoramic nature views",
-                 
+
                 ].map((feature, index) => (
                   <div key={index} className="flex items-start">
                     <Check className="h-5 w-5 text-primary mr-2 flex-shrink-0 mt-0.5" />
@@ -265,7 +284,7 @@ export default function Page({ params }: { params: Promise<{ id: string }> }) {
               <h2 className="text-2xl font-bold mb-6">Location</h2>
 
               <div className="relative h-auto md:h-100 pb-4">
-                <img src={house.map} alt="Map"  className="object-cover" />
+                <img src={house.map} alt="Map" className="object-cover" />
                 <div className="absolute top-4 right-4 z-10">
                   <a
                     href={house.navigation}
@@ -439,11 +458,10 @@ export default function Page({ params }: { params: Promise<{ id: string }> }) {
                   <button
                     key={index}
                     onClick={() => setSelectedImageIndex(index)}
-                    className={`w-2 h-2 rounded-full ${
-                      index === selectedImageIndex
+                    className={`w-2 h-2 rounded-full ${index === selectedImageIndex
                         ? "bg-primary"
                         : "bg-white/50"
-                    }`}
+                      }`}
                     aria-label={`Go to image ${index + 1}`}
                   />
                 ))}
