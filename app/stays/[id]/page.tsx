@@ -230,7 +230,7 @@ export default function Page({ params }: { params: Promise<{ id: string }> }) {
             </section>
 
             <Link
-              href={`https://bookings.keethhouse.com/?chainId=7859&propertyId=${house.propertyId}&house=${house.id}`}
+              href={`https://bookings.keethhouse.in/?chainId=7859&propertyId=${house.propertyId}&house=${house.id}`}
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -346,7 +346,7 @@ export default function Page({ params }: { params: Promise<{ id: string }> }) {
                   </div>
                 </div>
                 <Link
-                  href={`https://bookings.keethhouse.com/?chainId=7859&propertyId=${house.propertyId}&house=${house.id}`}
+                  href={`https://bookings.keethhouse.in/?chainId=7859&propertyId=${house.propertyId}&house=${house.id}`}
                   target="_blank"
                   rel="noopener noreferrer"
                 >
