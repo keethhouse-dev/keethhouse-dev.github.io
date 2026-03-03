@@ -38,7 +38,7 @@ export default function Page({ params }: { params: Promise<{ id: string }> }) {
   useEffect(() => {
     // Find the house data
     for (const p of phaseData) {
-      const foundHouse = p.houses.find((h) => h.id === id);
+      const foundHouse = p?.houses?.find((h) => h.id === id);
       if (foundHouse) {
         houseData.current = {
           house: foundHouse,
