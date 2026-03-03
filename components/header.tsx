@@ -203,7 +203,7 @@ const Header = () => {
                           {phase.title}
                         </h3>
                         <div className="flex flex-wrap gap-2">
-                          {phase.houses.map((house) => (
+                          {phase?.houses?.map((house) => (
                             <Link
                               key={house.id}
                               href={`/stays/${house.id}`}
@@ -297,7 +297,7 @@ const Header = () => {
                               {phase.title}
                             </h3>
                             <div className="flex flex-wrap gap-2">
-                              {phase.houses.map((house) => (
+                              {phase?.houses?.map((house) => (
                                 <Link
                                   key={house.id}
                                   href={`/stays/${house.id}`}

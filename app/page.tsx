@@ -53,7 +53,7 @@ const PhaseSection = React.memo(
           </div>
 
           {/* Display houses in a grid with smooth staggered animations */}
-          {phase.houses && phase.houses.length > 0 && (
+          {phase?.houses && phase?.houses?.length > 0 && (
             <motion.div
               initial="hidden"
               whileInView="visible"
@@ -68,7 +68,7 @@ const PhaseSection = React.memo(
               }}
               className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
             >
-              {phase.houses.map((house: any, idx: number) => (
+              {phase?.houses?.map((house: any, idx: number) => (
                 <HouseCard
                   key={house.id}
                   house={house}
