@@ -140,14 +140,6 @@ export default function TreeTopKafePage() {
           className="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-10"
         >
           <div className="flex flex-col items-center">
-            <motion.span
-              initial={{ opacity: 0, y: -10 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 1.0, duration: 0.4 }}
-              className="text-white text-sm font-medium mb-2 tracking-wider"
-            >
-              Scroll to explore
-            </motion.span>
             <motion.div
               className="h-16 w-10 border border-white/50 rounded-full flex justify-center p-2 backdrop-blur-sm"
               animate={{
