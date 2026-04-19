@@ -389,8 +389,6 @@ export default function StaysPage() {
               className="text-center mx-auto text-[14px] font-normal text-white mb-6 md:mb-10 max-w-xl leading-relaxed"
             >
               Keeth House is a memory of the land and it’s people.
-              <br />
-              House that breathes, sways with the wind, absorbs the rains and dries under the sun.
             </motion.p>
           
           </div>

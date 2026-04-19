@@ -1,84 +1,109 @@
-# Keeth House - Experience Natural Living 
+# Keeth House — Experience Natural Living
 
-Keeth House is an organically built eco-stay situated near the beautiful town of Auroville. This project is a modern web application designed to showcase the unique accommodations and eco-friendly lifestyle offered by Keeth House.
+Keeth House is an organically built eco-stay situated near the beautiful town of Auroville. This project is the marketing site showcasing the unique accommodations and eco-friendly lifestyle offered by Keeth House.
+
+**Live:** https://keethhouse-dev.github.io
 
 ## Features
 
-- **Interactive UI**: Smooth animations and responsive design for an engaging user experience.
-- **Dynamic Content**: Information about different phases, houses, and amenities.
-- **Booking Integration**: Easy navigation to book your stay.
-- **Sustainability Focus**: Highlights eco-friendly practices and natural living.
+- **Interactive UI** — smooth animations and responsive design.
+- **Dynamic content** — information about different phases, houses, and amenities, driven by a single static data file.
+- **Booking integration** — deep links into the bookings portal.
+- **Sustainability focus** — highlights eco-friendly practices and natural living.
 
-## Tech Stack
+## Tech stack
 
+- **Framework:** Next.js 15 (App Router) with static export (`output: 'export'`)
+- **Language:** TypeScript, React 19
+- **Styling:** Tailwind CSS, Framer Motion
+- **UI primitives:** Radix UI, Lucide icons
+- **Hosting:** GitHub Pages (user site at `keethhouse-dev.github.io`)
+- **CI/CD:** GitHub Actions
 
-- **Frontend**: React, Next.js, TypeScript
-- **Styling**: Tailwind CSS, Framer Motion
-- **Icons**: Lucide React
-- **Utilities**: Radix UI, Tailwind Merge
-
-## Getting Started
+## Getting started
 
 ### Prerequisites
 
-- Node.js (v16 or higher)
-- npm or yarn
+- Node.js ≥ 20
+- yarn
 
-### Installation
+### Install & run
 
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/keethhouse-dev/keethhouse-ui.git
-   cd keeth-house
-   ```
-
-2. Install dependencies:
-   ```bash
-   npm install
-   # or
-   yarn install
-   ```
-
-3. Start the development server:
-   ```bash
-   npm run dev
-   # or
-   yarn dev
-   ```
-
-4. Open the application in your browser:
-   ```
-   http://localhost:3000
-   ```
-
-### Build for Production
-
-To build the project for production, run:
 ```bash
-npm run build
-# or
+git clone https://github.com/keethhouse-dev/keethhouse-dev.github.io.git
+cd keethhouse-dev.github.io
+yarn install
+yarn dev
+```
+
+Open http://localhost:3000.
+
+### Build locally
+
+```bash
 yarn build
 ```
 
-### Deploy
+Emits a fully static `out/` directory. You can preview it with any static file server (e.g. `npx serve out`).
 
-GitHub is conneted with Vercel, when we commit code to main branch, automatically deployment wil trigger and code will deploy to vercel in less than 2 mins.
+## Project structure
 
-## Project Structure
+```
+app/          Pages and layouts (App Router)
+components/   Reusable UI (Header, Footer, sections, shadcn/ui primitives)
+lib/          House data (lib/house-data.ts) and utilities
+public/       Static assets (images, favicon, .nojekyll)
+styles/       Global CSS
+.github/workflows/deploy.yml   CI/CD pipeline
+```
 
-- **`components/`**: Reusable UI components like `Footer`, `Header`, etc.
-- **`lib/`**: Utility functions and data files.
-- **`app/`**: Pages and layouts for the application.
-- **`styles/`**: Global and utility CSS files.
+## Deployment
+
+Every push to `main` automatically builds and publishes the site to GitHub Pages via `.github/workflows/deploy.yml`. No manual steps.
+
+```bash
+git add .
+git commit -m "your message"
+git push origin main
+```
+
+Build + deploy takes ~2–4 min on a cold cache, ~1–2 min after. Watch progress in the **Actions** tab:
+https://github.com/keethhouse-dev/keethhouse-dev.github.io/actions
+
+### Manual redeploy
+
+**Actions → Deploy to GitHub Pages → Run workflow → main.** Use when you need to re-publish without a new commit.
+
+### Rollback
+
+```bash
+git revert <bad-commit-sha>
+git push origin main
+```
+
+The workflow runs and restores the previous state.
+
+### One-time GitHub settings
+
+Enable at https://github.com/keethhouse-dev/keethhouse-dev.github.io/settings:
+
+- **Pages → Source** → `GitHub Actions`
+- **Actions → General → Workflow permissions** → `Read and write permissions`
+
+### Troubleshooting
+
+- **Build failed:** check the Actions log. The most common cause is adding a new dynamic route (`app/.../[param]/page.tsx`) without a `generateStaticParams` export — every dynamic segment must enumerate its values at build time.
+- **Changes not showing:** hard refresh (Ctrl+Shift+R), and confirm the latest workflow run is green.
+- **Assets 404:** if the repo is ever renamed away from `keethhouse-dev.github.io`, the site becomes a project site served at `/<repo>/`. In that case, add `basePath: '/<repo>'` and `assetPrefix: '/<repo>/'` to `next.config.mjs`.
 
 ## Contributing
 
-Contributions are welcome! Please fork the repository and submit a pull request.
+Contributions are welcome. Please fork the repository and open a pull request.
 
 ## License
 
-This project is licensed under the MIT License. See the `LICENSE` file for details.
+MIT — see `LICENSE`.
 
 ## Contact
 
-For inquiries, email us at [reservations@keethhouse.com](mailto:reservations@keethhouse.com). 
+[reservations@keethhouse.com](mailto:reservations@keethhouse.com)
