@@ -2,7 +2,7 @@
 
 This site is deployed to **GitHub Pages** as a fully static Next.js export. Every push to `main` triggers an automatic build and deploy via GitHub Actions.
 
-**Live URL:** https://keethhouse-dev.github.io/keethhouse-ui/
+**Live URL:** https://keethhouse-dev.github.io
 
 ---
 
@@ -12,7 +12,7 @@ This site is deployed to **GitHub Pages** as a fully static Next.js export. Ever
 - `.github/workflows/deploy.yml` runs on every push to `main` and on manual dispatch. It installs deps (yarn), builds the site, adds `.nojekyll`, and uploads `out/` as the Pages artifact.
 - GitHub Pages serves the artifact at the URL above.
 
-Because the site is hosted under a repo subpath, `basePath: '/keethhouse-ui'` and `assetPrefix: '/keethhouse-ui/'` are set in `next.config.mjs` when `NODE_ENV === 'production'`. Local `yarn dev` still runs at `/`.
+The site is served at the account root (user site), so no `basePath` or `assetPrefix` is needed — assets resolve from `/`.
 
 ---
 
@@ -47,8 +47,8 @@ If you need to re-deploy without pushing a new commit:
 
 ## Checking deployment status
 
-- **Actions tab:** `https://github.com/keethhouse-dev/keethhouse-ui/actions` — see the build/deploy logs live.
-- **Pages settings:** `https://github.com/keethhouse-dev/keethhouse-ui/settings/pages` — shows the latest deployment URL and status.
+- **Actions tab:** `https://github.com/keethhouse-dev/keethhouse-dev.github.io/actions` — see the build/deploy logs live.
+- **Pages settings:** `https://github.com/keethhouse-dev/keethhouse-dev.github.io/settings/pages` — shows the latest deployment URL and status.
 - **Environments:** the `github-pages` environment on the repo homepage sidebar links to the most recent deploy.
 
 ---
@@ -80,7 +80,7 @@ Check the Actions log. Most common causes:
 - **`next/image` with external remote** — already handled via `images.unoptimized: true`, so this shouldn't happen unless config changes.
 
 ### Site loads but CSS/JS is 404
-The `basePath` is wrong. If you moved to a custom domain, remove `basePath`/`assetPrefix` from `next.config.mjs`. If you renamed the repo, update `repoBasePath` in `next.config.mjs`.
+Asset paths are wrong. If you ever rename the repo away from `keethhouse-dev.github.io`, the site becomes a project site at `/<repo>/` and you'll need to add `basePath: '/<repo>'` and `assetPrefix: '/<repo>/'` back to `next.config.mjs`.
 
 ### Changes aren't showing up
 - Hard refresh (Ctrl+Shift+R) — the browser may be caching the old bundle.
@@ -97,7 +97,7 @@ Open devtools console. Usually a path-resolution issue — the `.nojekyll` file 
 
 ## First-time GitHub settings checklist
 
-These must be enabled manually at `https://github.com/keethhouse-dev/keethhouse-ui/settings`:
+These must be enabled manually at `https://github.com/keethhouse-dev/keethhouse-dev.github.io/settings`:
 
 - **Pages** → **Source**: select **"GitHub Actions"** (not "Deploy from a branch")
 - **Actions** → **General** → **Workflow permissions**: **"Read and write permissions"**
