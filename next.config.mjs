@@ -12,7 +12,14 @@ try {
 }
 
 /** @type {import('next').NextConfig} */
+const isProd = process.env.NODE_ENV === 'production'
+const repoBasePath = '/keethhouse-ui'
+
 const nextConfig = {
+  output: 'export',
+  trailingSlash: true,
+  basePath: isProd ? repoBasePath : '',
+  assetPrefix: isProd ? `${repoBasePath}/` : '',
   eslint: {
     ignoreDuringBuilds: true,
   },
