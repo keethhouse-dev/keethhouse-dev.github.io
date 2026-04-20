@@ -21,7 +21,8 @@
       "Bash(grep -E '\\\\\\\\r|\\\\\\\\n')",
       "Bash(sort -k2)",
       "Bash(node scripts/optimize-and-cleanup.mjs)",
-      "Bash(node scripts/delete-superseded.mjs)"
+      "Bash(node scripts/delete-superseded.mjs)",
+      "Bash(git *)"
     ]
   }
 }
