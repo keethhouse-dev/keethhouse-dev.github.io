@@ -37,6 +37,12 @@ const Header = () => {
     return () => window.removeEventListener("scroll", handleScroll)
   }, [])
 
+  // Pages that open on a light background (no dark hero).
+  // Header should render opaque from the top so nav stays legible.
+  const lightTopRoutes = ["/contact"]
+  const isLightTop = lightTopRoutes.some((p) => pathname === p || pathname.startsWith(p + "/"))
+  const useOpaqueHeader = isScrolled || isLightTop
+
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
       if (dropdownRef.current && !dropdownRef.current.contains(event.target as Node)) {
@@ -122,14 +128,24 @@ const Header = () => {
     <header
       className={cn(
         "fixed top-0 w-full z-50 transition-all duration-500 py-4 md:py-6 flex items-center",
-        isScrolled ? "bg-white/90 backdrop-blur-md shadow-sm" : "bg-transparent",
+        useOpaqueHeader ? "backdrop-blur-md" : "bg-transparent",
+        useOpaqueHeader && isScrolled ? "shadow-sm" : "",
       )}
+      style={
+        useOpaqueHeader
+          ? {
+              backgroundColor: isLightTop
+                ? "var(--story-paper)"
+                : "rgba(255, 255, 255, 0.9)",
+            }
+          : undefined
+      }
     >
       <div className="container mx-auto px-4 md:px-8 flex justify-between items-center">
           <motion.div initial={{ opacity: 0, y: -20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }}>
           <Link href="/" className="relative z-10">
             <Image
-              src={isScrolled ? "/logo.svg" : "/logo.png"}
+              src={useOpaqueHeader ? "/logo.svg" : "/logo.png"}
               alt="Keeth House Logo"
               width={180}
               height={100}
@@ -158,7 +174,7 @@ const Header = () => {
                 onClick={link.onClick}
                 className={cn(
                   "text-base font-medium transition-colors duration-200 hover:text-primary relative",
-                  pathname === link.href ? "text-primary" : isScrolled ? "text-foreground" : "text-white",
+                  pathname === link.href ? "text-primary" : useOpaqueHeader ? "text-foreground" : "text-white",
                 )}
               >
                 {link.title}
@@ -241,7 +257,7 @@ const Header = () => {
           animate={{ opacity: 1 }}
           whileTap={{ scale: 0.9 }}
           onClick={() => setIsOpen(!isOpen)}
-          className={`md:hidden p-4 rounded-full touch-target ${isScrolled ? "text-foreground bg-gray-100" : "text-white bg-black/20"}`}
+          className={`md:hidden p-4 rounded-full touch-target ${useOpaqueHeader ? "text-foreground bg-gray-100" : "text-white bg-black/20"}`}
           aria-label={isOpen ? "Close Menu" : "Open Menu"}
         >
           {isOpen ? <X size={24} /> : <Menu size={24} />}
