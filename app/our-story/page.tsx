@@ -307,10 +307,10 @@ function SectionTwo() {
               <Parallax range={28}>
                 <div className="relative aspect-[4/5] overflow-hidden shadow-[0_40px_80px_-30px_rgba(0,0,0,0.8)] ring-1 ring-[var(--story-gold-bright)]/15">
                   <img
-                    src="/images/our-story/our-story-1.webp"
-                    srcSet="/images/our-story/our-story-1-sm.webp 900w, /images/our-story/our-story-1.webp 1600w"
+                    src="/images/our-story/our-story-2.webp"
+                    srcSet="/images/our-story/our-story-2-sm.webp 900w, /images/our-story/our-story-2.webp 1600w"
                     sizes="(min-width: 768px) 45vw, 90vw"
-                    alt="A Keeth House woven from leaves and reeds"
+                    alt="A Keeth House where nature is a neighbour"
                     loading="lazy"
                     decoding="async"
                     className="absolute inset-0 w-full h-full object-cover"
