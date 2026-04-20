@@ -338,7 +338,7 @@ const Footer = () => {
               {[
                 { name: "Our Story", href: "/our-story" },
                 { name: "Our Houses", href: "/#phase-1" },
-                { name: "Before You Arrive", href: "/#before-arrival" },
+                { name: "Before You Arrive", href: "/before-you-arrive" },
                 { name: "Frequently Asked Questions", href: "/faq" },
                 { name: "Privacy Policy", href: "/privacy-policy" },
                 { name: "Contact", href: "/contact" },

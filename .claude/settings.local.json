@@ -22,7 +22,8 @@
       "Bash(sort -k2)",
       "Bash(node scripts/optimize-and-cleanup.mjs)",
       "Bash(node scripts/delete-superseded.mjs)",
-      "Bash(git *)"
+      "Bash(git *)",
+      "Bash(node *)"
     ]
   }
 }

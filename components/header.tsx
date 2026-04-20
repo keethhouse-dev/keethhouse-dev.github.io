@@ -63,6 +63,11 @@ const Header = () => {
       onClick: () => window.scrollTo(0, 0),
     },
     {
+      title: "Before You Arrive",
+      href: "/before-you-arrive",
+      onClick: () => window.scrollTo(0, 0),
+    },
+    {
       title: "Contact",
       href: "/contact",
       onClick: () => window.scrollTo(0, 0),

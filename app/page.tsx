@@ -23,6 +23,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { AnimatedSection } from "@/components/animated-section";
 import { HouseRules } from "@/components/house-rules";
+import AboutVideo from "@/components/about-video";
 
 // Replace the PhaseSection component with this enhanced version:
 const PhaseSection = React.memo(
@@ -450,81 +451,66 @@ export default function StaysPage() {
         )}
       </section>
 
-      {/* About Keeth House Section with YouTube Video - Optimized */}
-      <AnimatedSection className="py-16 md:py-24 bg-white relative overflow-hidden">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-8 md:mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold mb-2">
-              About Keeth House
-            </h2>
-            <div className="h-1 bg-primary mx-auto mb-6 w-20" />
-            <p className="max-w-2xl mx-auto text-foreground/80">
-              Discover the story behind our unique eco-friendly accommodations
-              and our commitment to sustainable living.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-10 items-center max-w-6xl mx-auto">
-            {/* YouTube Video - Optimized with loading attribute */}
-            <div className="relative aspect-video rounded-xl overflow-hidden shadow-xl">
-              <iframe
-                src="https://www.youtube.com/embed/ByeQq9gv0Ts?rel=0"
-                title="Keeth House Video"
-                className="absolute inset-0 w-full h-full"
-                frameBorder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowFullScreen
-                loading="lazy"
-              ></iframe>
+      {/* About Keeth House — cinematic custom video, editorial layout */}
+      <AnimatedSection className="py-20 md:py-28 bg-white relative">
+        <div className="container mx-auto px-4 md:px-8">
+          <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
+            {/* Film */}
+            <div className="lg:col-span-8">
+              <AboutVideo videoId="ByeQq9gv0Ts" alt="Keeth House — a quiet film" />
             </div>
 
-            {/* Content */}
-            <div className="space-y-4 md:space-y-6">
-              <h3 className="text-2xl font-semibold text-primary">
-                Natural Living Experience
-              </h3>
-              <p className="text-foreground/80">
-                Every so often, we yearn to escape the busy life and noisy
-                cities that never sleep. If a peaceful retreat amidst nature is
-                what you're seeking, then look no further.
+            {/* Editorial copy */}
+            <div className="lg:col-span-4">
+              <p
+                className="uppercase text-[var(--story-ink)]/85 mb-5"
+                style={{
+                  letterSpacing: "0.32em",
+                  fontSize: "11px",
+                  fontWeight: 500,
+                }}
+              >
+                About
               </p>
-              <p className="text-foreground/80">
-                Keeth House is an organically built eco-stay situated near the
-                beautiful town of Auroville. The word 'Keeth' denotes the thatch
-                roof that is used in the construction of our houses. Inspired by
-                the traditional huts that are still seen across Indian villages,
-                the thatched-roof bamboo cottages are built with locally sourced
-                materials.
-              </p>
-
-              <p className="text-foreground/80">
-                Surrounded by a forest of lush green trees, the houses retain a
-                natural coolness and fresh atmosphere. The tranquil location
-                combined with the exposed brick walls and rustic aesthetic is
-                assured to rejuvenate your soul.
-              </p>
+              <h2
+                className="text-[var(--story-ink)] mb-6"
+                style={{
+                  fontSize: "clamp(1.75rem, 2.6vw, 2.2rem)",
+                  fontWeight: 500,
+                  letterSpacing: "0.005em",
+                  lineHeight: 1.15,
+                }}
+              >
+                A house that remembers
+              </h2>
+              <div
+                aria-hidden
+                className="h-px bg-[var(--story-ink)]/15 w-10 mb-6"
+              />
+              <div className="space-y-4 text-[13.5px] md:text-[14.5px] leading-[1.9] text-[var(--story-ink)]/75 font-light">
+                <p>
+                  Every so often, we yearn to escape the busy life and noisy
+                  cities that never sleep. If a peaceful retreat amidst nature
+                  is what you&apos;re seeking, then look no further.
+                </p>
+                <p>
+                  Keeth House is an organically built eco-stay situated near
+                  the town of Auroville. The word <em>Keeth</em> denotes the
+                  thatch roof used in the construction of our houses —
+                  inspired by the traditional huts still seen across Indian
+                  villages, the thatched-roof bamboo cottages are built with
+                  locally sourced materials.
+                </p>
+                <p>
+                  Surrounded by a forest of lush green trees, the houses
+                  retain a natural coolness and fresh atmosphere. The tranquil
+                  location — with exposed brick walls and a rustic aesthetic
+                  — is meant to rejuvenate, quietly.
+                </p>
+              </div>
             </div>
           </div>
         </div>
-
-        {/* Simplified decorative elements for better performance */}
-        {!isReducedMotion && (
-          <>
-            <div
-              className="absolute top-40 right-0 w-64 h-64 rounded-full bg-primary/5 blur-3xl -z-10"
-              style={{
-                animation: "pulse 8s infinite alternate",
-              }}
-            />
-
-            <div
-              className="absolute bottom-20 left-10 w-40 h-40 rounded-full border border-primary/10 -z-10"
-              style={{
-                animation: "spin 20s linear infinite",
-              }}
-            />
-          </>
-        )}
       </AnimatedSection>
 
       {/* Phase Sections - Reference for lazy loading */}
@@ -534,270 +520,101 @@ export default function StaysPage() {
         ))}
       </div>
 
-      {/* Before You Arrive Section - Optimized with simplified animations */}
-      <AnimatedSection className="py-16 md:py-20 bg-gray-50 relative">
+      {/* Before You Arrive — matches /before-you-arrive editorial grid */}
+      <AnimatedSection className="py-20 md:py-28 relative [background-color:var(--story-paper)]">
         <div
-          className="container mx-auto px-4 relative z-10"
+          className="container mx-auto px-4 md:px-8 relative z-10"
           id="before-arrival"
         >
-          <div className="text-center mb-8 md:mb-12">
-            <h2 className="text-3xl sm:text-4xl font-bold mb-2">
+          <div className="text-center mb-14 md:mb-20">
+            <h2
+              className="text-[var(--story-ink)]"
+              style={{
+                fontSize: "clamp(1.75rem, 3.2vw, 2.5rem)",
+                fontWeight: 500,
+                letterSpacing: "0.005em",
+                lineHeight: 1.15,
+              }}
+            >
               Before You Arrive
             </h2>
-            <div className="h-1 bg-primary mx-auto mb-6 w-20" />
-            <p className="max-w-2xl mx-auto text-foreground/80">
-              Experience the charm of staying at Keeth House with us. Learn more
-              about our location, in-house kitchen, and transportation options
-              through our frequently asked questions.
-            </p>
           </div>
 
-          <div className="max-w-4xl mx-auto">
-            <h3 className="text-2xl font-semibold mb-6">
-              Essential Information
-            </h3>
-
-            {/* Optimized grid with fewer animations */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3 md:gap-4 mb-8">
-              <Card>
-                <CardHeader className="pb-2 p-3 md:p-4">
-                  <CardTitle className="flex items-center text-base md:text-lg ">
-                    <Clock className="h-4 w-4 md:h-5 md:w-5 text-primary mr-2" />{" "}
-                    Check-In & Check-Out
-                  </CardTitle>
-                </CardHeader>
-                <CardContent className="p-3 md:p-4 pt-0">
-                  <p className="text-xs md:text-sm text-foreground/80">
-                    Check-In: 12:00 PM – 7:00 PM
-                    <br />
-                    Check-Out: by 10:00 AM
-                  </p>
-                </CardContent>
-              </Card>
-
-              <Card>
-                <CardHeader className="pb-2 p-3 md:p-4">
-                  <CardTitle className="flex items-center text-base md:text-lg">
-                    <MapPin className="h-4 w-4 md:h-5 md:w-5 text-primary mr-2" />{" "}
-                    Location
-                  </CardTitle>
-                </CardHeader>
-                <CardContent className="p-3 md:p-4 pt-0">
-                  <p className="text-xs md:text-sm text-foreground/80">
-                    Near Auroville, Tamil Nadu
-                    <br />
-                    Detailed directions will be provided after the
-                    reservation is confirmed
-                  </p>
-                </CardContent>
-              </Card>
-
-              <Card>
-                <CardHeader className="pb-2 p-3 md:p-4">
-                  <CardTitle className="flex items-center text-base md:text-lg">
-                    <Utensils className="h-4 w-4 md:h-5 md:w-5 text-primary mr-2" />{" "}
-                    Dining
-                  </CardTitle>
-                </CardHeader>
-                <CardContent className="p-3 md:p-4 pt-0">
-                  <p className="text-xs md:text-sm text-foreground/80">
-                    South Indian Breakfast: Included
-                    <br />
-                    Lunch: ₹700 per couple
-                  </p>
-                </CardContent>
-              </Card>
-            </div>
-
-            {/* Body sections */}
-            <div className="space-y-6 md:space-y-8">
-              {/* Meet Our Team */}
-              <div>
-                <h3 className="text-xl font-semibold mb-3 flex items-center">
-                  <Users className="h-5 w-5 text-primary mr-2" /> Meet Our Team
-                </h3>
-                <div className="p-4 md:p-5 bg-white rounded-lg border border-gray-200 shadow-sm">
-                  <p className="text-sm md:text-[15px] leading-relaxed text-foreground/80">
-                    At Keeth House, we are a small team comprised of our friends
-                    and families from local villages near Auroville. While we
-                    may not operate like a traditional hotel with 24/7 reception
-                    and services, we strive to offer a tranquil and delightful
-                    experience. Our availability is from 8 am to 10 pm daily,
-                    and our security guard is also present throughout the night
-                    for added peace of mind. If you desire daily cleaning,
-                    kindly inform us upon check-in or in the morning. Your
-                    privacy is paramount to us; we respect your space but
-                    remain eager to assist whenever needed.
-                  </p>
+          <div className="max-w-6xl mx-auto">
+            <div className="grid md:grid-cols-2 gap-y-6 md:gap-y-12 gap-x-12 md:gap-x-20">
+              {[
+                {
+                  title: "Meet Our Team",
+                  paragraphs: [
+                    "At Keeth House, we are a small team comprised of our friends and families from local villages near Auroville. While we may not operate like a traditional hotel with 24/7 reception and services, we strive to offer a tranquil and delightful experience. Our availability is from 8 am to 10 pm daily, and our security guard is also present throughout the night for added peace of mind.",
+                    "If you desire daily cleaning, kindly inform us upon check-in or in the morning. Your privacy is paramount to us; we respect your space but remain eager to assist whenever needed.",
+                  ],
+                },
+                {
+                  title: "Your First Keeth House Experience",
+                  paragraphs: [
+                    "Step into Keeth House, nestled within the embrace of local nature. While our commitment to cleanliness is unwavering, our rustic setting invites occasional guests like insects, furry caterpillars (best admired from a distance), frogs, snakes, and mice. Kindly bear this in mind before booking, as we coexist harmoniously with these creatures.",
+                    "There are venomous snakes in this region, thus we urge you to turn on your lights when moving around in the night. Snakes would never attack you — you just need to make sure not to step on them. Please, don\u2019t touch furry caterpillars; they can bruise your skin and bring a rash. Despite our diligent efforts, encounters with spiders, bugs, and mosquitoes are part of our natural surroundings.",
+                    "If these encounters make you uncomfortable, perhaps an alternative accommodation might better suit your preferences. Embrace the off-the-grid experience with us at Keeth House.",
+                  ],
+                },
+                {
+                  title: "In-House Kitchen",
+                  paragraphs: [
+                    "We\u2019re delighted to offer South Indian Breakfast which is included, and the Lunch charges are 700 INR for a couple. Kindly inform us in advance. We have the Tree Top Kafe in Phase III — an exclusive café set atop a tree, offering a truly unique experience. Do take some time to visit and unwind with the views, sounds, and stillness around you. We provide RO water and kindly request our guests to refill their bottles at the designated refill station.",
+                    "Additionally, we\u2019d be glad to suggest some cafés in Auroville and Pondicherry for you to explore during your stay at Keeth House. Swiggy and Zomato deliveries are not permitted, to help us reduce plastic containers and packaging entering the premises.",
+                    "Moreover, you have the option to use our self-help kitchenette in all the houses except The Khaya Nest. We look forward to enhancing your experience at Keeth House.",
+                  ],
+                },
+                {
+                  title: "Transportation and Arrival / Departure Support",
+                  paragraphs: [
+                    "We kindly ask guests to check in between 12 pm and 7 pm to avoid any inconvenience. Kindly aim to avoid arriving later than 8 pm, as it can pose challenges and may not be feasible in some cases. Check-out time is by 10 am.",
+                    "For those interested in transportation assistance, we can provide contacts for our trusted drivers once your reservation is confirmed. Our recommended drivers offer pickup services from various city locations. For late-night arrivals due to flights, we recommend our verified drivers for a safe and fair-priced journey to Keeth House.",
+                    "You could also rent a scooter from us at the property for your commute to cafes and beaches. Please check with the property manager for the rental charges.",
+                    "Your early check-in request is important to us, and we would love to accommodate it based on the availability. However, note that if we have a booking scheduled prior to your arrival, we can only provide you with access to the house by 12 pm. We kindly request your understanding and cooperation in planning your arrival accordingly.",
+                  ],
+                },
+                {
+                  title: "Weather at Keeth House",
+                  paragraphs: [
+                    "Keeth House is designed with eco-friendliness in mind, ensuring your comfort even in hot weather.",
+                    "While days might be a bit warm, evenings are incredibly pleasant. Surrounded by trees, the natural environment creates a cooling effect. You\u2019ll experience a noticeable temperature drop, providing a refreshing and chilly night ambiance.",
+                    "We\u2019re committed to making your stay enjoyable and relaxing, regardless of the weather.",
+                  ],
+                },
+                {
+                  title: "Location",
+                  paragraphs: [
+                    "Keeth House is located in Edayanchavadi, just a short 5–10 minute drive from the cafés and places to explore in Auroville, while Pondicherry town is about 20–30 minutes away. Pondicherry Airport is a convenient 25-minute drive, and Chennai International Airport is around 3 hours away. For getting around comfortably, we recommend renting a scooter.",
+                  ],
+                },
+              ].map((s) => (
+                <div
+                  key={s.title}
+                  className="px-2 md:px-4 py-6 md:py-8 text-center"
+                >
+                  <h3
+                    className="text-[var(--story-ink)] mb-6"
+                    style={{
+                      fontSize: "clamp(1.2rem, 1.8vw, 1.5rem)",
+                      fontWeight: 500,
+                      letterSpacing: "0.005em",
+                      lineHeight: 1.25,
+                    }}
+                  >
+                    {s.title}
+                  </h3>
+                  <div className="space-y-4 text-[13.5px] md:text-[14px] leading-[1.9] text-[var(--story-ink)]/75 font-light">
+                    {s.paragraphs.map((p, idx) => (
+                      <p key={idx}>{p}</p>
+                    ))}
+                  </div>
                 </div>
-              </div>
-
-              {/* Your First Keeth House Experience */}
-              <div>
-                <h3 className="text-xl font-semibold mb-3 flex items-center">
-                  <Home className="h-5 w-5 text-primary mr-2" /> Your First
-                  Keeth House Experience
-                </h3>
-                <div className="p-4 md:p-5 bg-white rounded-lg border border-gray-200 shadow-sm space-y-3 text-sm md:text-[15px] leading-relaxed text-foreground/80">
-                  <p>
-                    Step into Keeth House, nestled within the embrace of local
-                    nature. While our commitment to cleanliness is unwavering,
-                    our rustic setting invites occasional guests like insects,
-                    furry caterpillars (best admired from a distance), frogs,
-                    snakes, and mice. Kindly bear this in mind before booking,
-                    as we coexist harmoniously with these creatures.
-                  </p>
-                  <p>
-                    There are venomous snakes in this region, thus we urge you
-                    to turn on your lights when moving around in the night.
-                    Snakes would never attack you, you just need to make sure
-                    not to step on them. Please, don&apos;t touch furry
-                    caterpillars — they can bruise your skin and bring a rash.
-                    Despite our diligent efforts, encounters with spiders,
-                    bugs, and mosquitoes are part of our natural surroundings.
-                  </p>
-                  <p>
-                    If these encounters make you uncomfortable, perhaps an
-                    alternative accommodation might better suit your
-                    preferences. Embrace the off-the-grid experience with us
-                    at Keeth House.
-                  </p>
-                </div>
-              </div>
-
-              {/* In-House Kitchen */}
-              <div>
-                <h3 className="text-xl font-semibold mb-3 flex items-center">
-                  <ChefHat className="h-5 w-5 text-primary mr-2" /> In-House
-                  Kitchen
-                </h3>
-                <div className="p-4 md:p-5 bg-white rounded-lg border border-gray-200 shadow-sm space-y-3 text-sm md:text-[15px] leading-relaxed text-foreground/80">
-                  <p>
-                    We&apos;re delighted to offer South Indian Breakfast which
-                    is included, and Lunch at ₹700 per couple. Kindly inform
-                    us in advance. We have the{" "}
-                    <span className="font-medium text-foreground">
-                      Tree Top Kafe
-                    </span>{" "}
-                    in Phase III — an exclusive café set atop a tree, offering
-                    a truly unique experience. Do take some time to visit and
-                    unwind with the views, sounds, and stillness around you.
-                    We provide RO water and kindly request our guests to
-                    refill their bottles at the designated refill station.
-                  </p>
-                  <p>
-                    We&apos;d be glad to suggest some cafés in Auroville and
-                    Pondicherry for you to explore during your stay. Swiggy
-                    and Zomato deliveries are not permitted, to help us reduce
-                    plastic containers and packaging entering the premises.
-                  </p>
-                  <p>
-                    You also have the option to use our self-help kitchenette
-                    in all the houses except The Khaya Nest. We look forward
-                    to enhancing your experience at Keeth House!
-                  </p>
-                </div>
-              </div>
-
-              {/* Transportation & Arrival / Departure Support */}
-              <div>
-                <h3 className="text-xl font-semibold mb-3 flex items-center">
-                  <Car className="h-5 w-5 text-primary mr-2" /> Transportation
-                  &amp; Arrival / Departure Support
-                </h3>
-                <div className="p-4 md:p-5 bg-white rounded-lg border border-gray-200 shadow-sm space-y-3 text-sm md:text-[15px] leading-relaxed text-foreground/80">
-                  <p>
-                    We kindly ask guests to check in between{" "}
-                    <span className="font-medium text-foreground">
-                      12 pm and 7 pm
-                    </span>{" "}
-                    to avoid any inconvenience. Kindly aim to avoid arriving
-                    later than 8 pm, as it can pose challenges and may not be
-                    feasible in some cases. Check-out time is by 10 am.
-                  </p>
-                  <p>
-                    For those interested in transportation assistance, we can
-                    provide contacts for our trusted drivers once your
-                    reservation is confirmed. Our recommended drivers offer
-                    pickup services from various city locations. For
-                    late-night arrivals due to flights, we recommend our
-                    verified drivers for a safe and fair-priced journey to
-                    Keeth House.
-                  </p>
-                  <p>
-                    You could also rent a scooter from us at the property for
-                    your commute to cafés and beaches. Please check with the
-                    property manager for the rental charges.
-                  </p>
-                  <p>
-                    Your early check-in request is important to us, and we
-                    would love to accommodate it based on availability.
-                    However, note that if we have a booking scheduled prior to
-                    your arrival, we can only provide you with access to the
-                    house by 12 pm. We kindly request your understanding and
-                    cooperation in planning your arrival accordingly.
-                  </p>
-                </div>
-              </div>
-
-              {/* Weather at Keeth House */}
-              <div>
-                <h3 className="text-xl font-semibold mb-3 flex items-center">
-                  <Sun className="h-5 w-5 text-primary mr-2" /> Weather at
-                  Keeth House
-                </h3>
-                <div className="p-4 md:p-5 bg-white rounded-lg border border-gray-200 shadow-sm space-y-3 text-sm md:text-[15px] leading-relaxed text-foreground/80">
-                  <p>
-                    Keeth House is designed with eco-friendliness in mind,
-                    ensuring your comfort even in hot weather.
-                  </p>
-                  <p>
-                    While days might be a bit warm, evenings are incredibly
-                    pleasant. Surrounded by trees, the natural environment
-                    creates a cooling effect. You&apos;ll experience a
-                    noticeable temperature drop, providing a refreshing and
-                    chilly night ambiance.
-                  </p>
-                  <p>
-                    We&apos;re committed to making your stay enjoyable and
-                    relaxing, regardless of the weather.
-                  </p>
-                </div>
-              </div>
-
-              {/* Location */}
-              <div>
-                <h3 className="text-xl font-semibold mb-3 flex items-center">
-                  <Navigation className="h-5 w-5 text-primary mr-2" /> Location
-                </h3>
-                <div className="p-4 md:p-5 bg-white rounded-lg border border-gray-200 shadow-sm text-sm md:text-[15px] leading-relaxed text-foreground/80">
-                  <p>
-                    Keeth House is located in{" "}
-                    <span className="font-medium text-foreground">
-                      Edayanchavadi
-                    </span>
-                    , just a short 5–10 minute drive from the cafés and places
-                    to explore in Auroville, while Pondicherry town is about
-                    20–30 minutes away. Pondicherry Airport is a convenient
-                    25-minute drive, and Chennai International Airport is
-                    around 3 hours away. For getting around comfortably, we
-                    recommend renting a scooter.
-                  </p>
-                </div>
-              </div>
+              ))}
             </div>
           </div>
         </div>
-
-        {/* Simplified decorative elements */}
-        {!isReducedMotion && (
-          <div
-            className="absolute top-40 left-20 w-80 h-80 rounded-full bg-primary/5 blur-3xl -z-10"
-            style={{
-              animation: "pulse 10s infinite alternate",
-            }}
-          />
-        )}
       </AnimatedSection>
 
        {/* House Rules Section */}
