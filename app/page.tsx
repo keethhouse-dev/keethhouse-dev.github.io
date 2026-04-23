@@ -482,7 +482,7 @@ export default function StaysPage() {
             </div>
 
             {/* Editorial copy */}
-            <div className="lg:col-span-4">
+            <div className="lg:col-span-4 text-center">
               <p
                 className="uppercase text-[var(--story-ink)]/85 mb-5"
                 style={{
@@ -494,7 +494,7 @@ export default function StaysPage() {
                 About
               </p>
               <h2
-                className="text-[var(--story-ink)] mb-4 whitespace-nowrap"
+                className="text-[var(--story-ink)] mb-4"
                 style={{
                   fontSize: "clamp(1.35rem, 1.9vw, 1.7rem)",
                   fontWeight: 500,
@@ -506,7 +506,7 @@ export default function StaysPage() {
               </h2>
               <div
                 aria-hidden
-                className="h-px bg-[var(--story-ink)]/15 w-10 mb-5"
+                className="h-px bg-[var(--story-ink)]/15 w-10 mx-auto mb-5"
               />
               <div className="space-y-3.5 text-[13px] leading-[1.65] text-[var(--story-ink)]/90">
                 <p>
