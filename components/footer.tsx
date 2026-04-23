@@ -204,7 +204,7 @@ const Footer = () => {
               fontWeight: 500,
             }}
           >
-            © {new Date().getFullYear()} Keeth House · Auroville, Tamil Nadu
+            © {new Date().getFullYear()} Keeth House · Near Auroville, Tamil Nadu
           </p>
         </motion.div>
       </motion.div>
